@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <parameter name="tv" value=" 75inch samsung led tv"/>
+  <parameter name="pc" value="logitech headset"/>
   <test name="Test">
     <classes>
-      <class name="org.testcases.TC_AddCart"/>
+      <class name="org.testcases.TC_Search"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test(failed)">
-    <classes>
-      <class name="org.testcases.TC_AddCart">
-        <methods>
-          <include name="addCart" invocation-numbers="0"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- org.testcases.TC_AddCart -->
-    </classes>
-  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -11,6 +11,17 @@ public class PojoLogin extends Baseclass{
 		PageFactory.initElements(driver, this);
 	}	
 	
+	@FindBy(xpath="(//i[@class='menu-close ico ico-times'])[2]")	
+	private WebElement close;
+	
+	public WebElement getClose() {
+		return close;
+	}
+
+	public void setClose(WebElement close) {
+		this.close = close;
+	}
+
 	@FindBy(xpath="//div[text()='Sign In / Register']")
 	private WebElement signin;
 	

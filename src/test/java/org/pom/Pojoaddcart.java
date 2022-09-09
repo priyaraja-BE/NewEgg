@@ -10,16 +10,20 @@ public class Pojoaddcart extends Baseclass{
 		PageFactory.initElements(driver, this);
 	}	
 	
+	@FindBy(xpath="(//i[@class='menu-close ico ico-times'])[2]")	
+	private WebElement close;
+	
+	public WebElement getClose() {
+		return close;
+	}
 	@FindBy(xpath="//input[@type='search']")
 	private WebElement search;
-
-	
 
 	@FindBy(xpath="//span[text()='Search']")
 	private WebElement searchok;
 	
 	
-	@FindBy(xpath="(//a[text()='Samsung QN75Q70AAFXZA 4K QLED (2021)")
+	@FindBy(xpath="(//a[@class='item-title'])[1]")
     private WebElement prod;
 	
 	@FindBy(xpath="//button[text()='Add to cart ']")

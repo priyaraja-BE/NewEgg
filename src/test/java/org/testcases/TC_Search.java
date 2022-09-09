@@ -24,6 +24,7 @@ public class TC_Search extends Baseclass {
 	@Test
 	public void sear(String s1) {
 		Pojosearch p=new Pojosearch();
+		clk(p.getClose());
 		pasTxt(s1, p.getSearch());
 		
 		

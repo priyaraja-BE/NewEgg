@@ -2,6 +2,7 @@ package org.pom;
 
 import org.newegg.Baseclass;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -11,6 +12,13 @@ public class Pojoregister extends Baseclass{
 	public Pojoregister() {
 		PageFactory.initElements(driver, this);
 	}	
+	
+	@FindBy(xpath="(//i[@class='menu-close ico ico-times'])[2]")	
+	private WebElement close;
+	
+	public WebElement getClose() {
+		return close;
+	}
 	
 	@FindBy(xpath="//strong[text()='Sign Up']")
 	private WebElement signup;
@@ -27,8 +35,22 @@ public class Pojoregister extends Baseclass{
 	@FindBy(xpath="//input[@type='email']")
 	private WebElement email;
 	
-	@FindBy(xpath="//input[@type='password']")
+	@FindAll({
+		@FindBy(xpath="//label[text()='Password']"),
+		@FindBy(xpath="(//input[@type='password'])[2]"),
+		
+	})
 	private WebElement pass;
+
+	
+
+	public WebElement getPass() {
+		return pass;
+	}
+
+	public void setPass(WebElement pass) {
+		this.pass = pass;
+	}
 
 	public WebElement getSignup() {
 		return signup;
@@ -50,9 +72,7 @@ public class Pojoregister extends Baseclass{
 		return phn;
 	}
 
-	public WebElement getPass() {
-		return pass;
-	}
+	
 	
 	
 	

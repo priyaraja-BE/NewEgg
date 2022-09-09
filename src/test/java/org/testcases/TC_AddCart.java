@@ -17,17 +17,22 @@ public class TC_AddCart extends Baseclass{
 		launchUrl("https://www.newegg.com/");
 		implicitWait(15);
 			}
+	
 		
 	@Parameters({"tv"})
 	@Test(groups ="smoke")
 	public void addCart(@Optional("75inch samsung led tv") String s1) {
 		Pojoaddcart a=new Pojoaddcart();
+		clk(a.getClose());
 		pasTxt(s1, a.getSearch());
-        clk(a.getSearchok());
-        clk(a.getSearchok());
-        clk(a.getProd());
-        clk(a.getAddcart());
+		javaScriptExeclk(a.getSearchok());
+		javaScriptExeclk(a.getProd());
+        javaScriptExeclk(a.getAddcart());
+        
 }
+	@AfterClass
+	public void closebrowser() {
+		driver.quit();
 }
 }
 	

@@ -11,6 +11,12 @@ public class Pojosearch extends Baseclass{
 		PageFactory.initElements(driver, this);
 	}	
 	
+	@FindBy(xpath="(//i[@class='menu-close ico ico-times'])[2]")	
+	private WebElement close;
+	
+	public WebElement getClose() {
+		return close;
+	}
 	@FindBy(xpath="//input[@type='search']")
 	private WebElement search;
 
